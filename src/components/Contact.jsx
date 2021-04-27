@@ -11,7 +11,7 @@ const Contact = () => (
     <div className="contact-form-col">
       <form
         id="form-contact"
-        name="form-contact"
+        name="form-pixelranch-contact"
         method="POST"
         data-netlify="true"
       >
@@ -124,10 +124,9 @@ const Contact = () => (
         <button
           name="form-contact-submit"
           type="submit"
-          id="form-contact-submit"
-        >
-          <Icon icon="envelope" collection="far" className="icon-contact" />{" "}
-          Send Message
+          id="form-contact-submit">
+            <Icon icon="envelope" collection="far" className="icon-contact" />{" "}
+            Send Message
         </button>
       </form>
     </div>
