@@ -8,6 +8,10 @@ const Contact = () => {
     organization: "",
     email: "",
     phone: "", 
+    service_web_dev: "",
+    service_web3: "",
+    service_troubleshooting: "",
+    service_other: "",
     message: "" 
   });
 
@@ -18,7 +22,10 @@ const Contact = () => {
   }
 
   const handleChange = e => {
-    setFormState({ [e.target.name]: e.target.value });
+    setFormState({
+      ...formState,
+      [e.target.name]: e.target.value 
+    });
     console.log('formState', formState);
   };
 
