@@ -26,7 +26,6 @@ const Contact = () => {
       ...formState,
       [e.target.name]: e.target.value 
     });
-    console.log('formState', formState);
   };
 
   const handleSubmit = e => {
