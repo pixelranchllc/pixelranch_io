@@ -3,7 +3,13 @@ import { navigate } from 'gatsby-link';
 import Icon from "./Icon";
 
 const Contact = () => {
-  const [formState, setFormState] = useState({ name: "", email: "", message: "" });
+  const [formState, setFormState] = useState({ 
+    name: "", 
+    organization: "",
+    email: "",
+    phone: "", 
+    message: "" 
+  });
 
   const encode = data => {
     return Object.keys(data)
@@ -11,11 +17,14 @@ const Contact = () => {
       .join('&')
   }
 
-  const handleChange = e => setFormState({ [e.target.name]: e.target.value });
+  const handleChange = e => {
+    setFormState({ [e.target.name]: e.target.value });
+    console.log('formState', formState);
+  };
 
   const handleSubmit = e => {
-    e.preventDefault()
-    const form = e.target
+    e.preventDefault();
+    const form = e.target;
 
     fetch('/', {
       method: 'POST',
