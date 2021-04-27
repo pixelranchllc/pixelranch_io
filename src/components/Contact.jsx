@@ -72,6 +72,7 @@ const Contact = () => (
               <input
                 type="checkbox"
                 id="service_web_dev"
+                name="service_web_dev"
                 value="Web Application Development"
               />
               <label htmlFor="service_web_dev">Web Application Development</label>
@@ -80,6 +81,7 @@ const Contact = () => (
               <input
                 type="checkbox"
                 id="service_web3"
+                name="service_web3"                
                 value="Web3 Development"
               />
               <label htmlFor="service_web3">Web3 Development</label>
@@ -88,6 +90,7 @@ const Contact = () => (
               <input
                 type="checkbox"
                 id="service_troubleshooting"
+                name="service_troubleshooting"                
                 value="Troubleshooting"
               />
               <label htmlFor="service_troubleshooting">Troubleshooting</label>
@@ -96,6 +99,7 @@ const Contact = () => (
               <input
                 type="checkbox"
                 id="service_other"
+                name="service_other"                
                 value="Other Services"
               />
               <label htmlFor="service_other">
