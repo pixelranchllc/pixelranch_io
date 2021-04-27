@@ -1,5 +1,29 @@
-import React from "react";
+import React, { useState } from "react";
 import Icon from "./Icon";
+
+const [formState, setFormState] = useState =({ 
+  name: "", 
+  email: "", 
+  message: "" 
+});
+
+const handleChange = e => setFormState({ [e.target.name]: e.target.value });
+
+
+const handleSubmit = e => {
+  fetch('/', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+    body: encode({
+      'form-name': form.getAttribute('name'),
+      ...formState,
+    }),
+  })
+    .then(() => navigate(form.getAttribute('action')))
+    .catch((error) => console.error(error))
+
+  e.preventDefault()
+}
 
 const Contact = () => (
   <section>
@@ -10,6 +34,7 @@ const Contact = () => (
 
     <div className="contact-form-col">
       <form
+        action="/"
         id="form-contact"
         name="form-pixelranch-contact"
         method="POST"
@@ -25,6 +50,7 @@ const Contact = () => (
               placeholder="Your Name"
               required
               type="text"
+              onChange={handleChange}
             />
           </label>
         </fieldset>
@@ -37,6 +63,7 @@ const Contact = () => (
               name="organization"
               placeholder="Your Organization"
               type="text"
+              onChange={handleChange}
             />
           </label>
         </fieldset>        
@@ -49,6 +76,7 @@ const Contact = () => (
               name="email"
               placeholder="Your E-mail"
               type="email"
+              onChange={handleChange}
               required
             />
           </label>
@@ -62,6 +90,7 @@ const Contact = () => (
               name="phone"
               placeholder="Your Phone Number (optional)"
               type="tel"
+              onChange={handleChange}
             />
           </label>
         </fieldset>
@@ -75,6 +104,7 @@ const Contact = () => (
                 id="service_web_dev"
                 name="service_web_dev"
                 value="Web Application Development"
+                onChange={handleChange}
               />
               <label htmlFor="service_web_dev">Web Application Development</label>
             </li>
@@ -84,6 +114,7 @@ const Contact = () => (
                 id="service_web3"
                 name="service_web3"                
                 value="Web3 Development"
+                onChange={handleChange}
               />
               <label htmlFor="service_web3">Web3 Development</label>
             </li>
@@ -93,6 +124,7 @@ const Contact = () => (
                 id="service_troubleshooting"
                 name="service_troubleshooting"                
                 value="Troubleshooting"
+                onChange={handleChange}
               />
               <label htmlFor="service_troubleshooting">Troubleshooting</label>
             </li>
@@ -102,6 +134,7 @@ const Contact = () => (
                 id="service_other"
                 name="service_other"                
                 value="Other Services"
+                onChange={handleChange}
               />
               <label htmlFor="service_other">
                 Other
@@ -122,6 +155,7 @@ const Contact = () => (
               required
               rows="5"
               wrap="virtual"
+              onChange={handleChange}
             />
           </label>
         </fieldset>
