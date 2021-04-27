@@ -14,6 +14,7 @@ const Contact = () => (
         name="form-pixelranch-contact"
         method="POST"
         data-netlify="true"
+        netlify
       >
         <fieldset>
           <label htmlFor="name">
