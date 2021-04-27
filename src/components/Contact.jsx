@@ -11,6 +11,9 @@ const handleChange = e => setFormState({ [e.target.name]: e.target.value });
 
 
 const handleSubmit = e => {
+  e.preventDefault()
+  const form = e.target
+  
   fetch('/', {
     method: 'POST',
     headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
@@ -21,8 +24,6 @@ const handleSubmit = e => {
   })
     .then(() => navigate(form.getAttribute('action')))
     .catch((error) => console.error(error))
-
-  e.preventDefault()
 }
 
 const Contact = () => (
