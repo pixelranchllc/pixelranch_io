@@ -11,7 +11,7 @@ const Services = () => (
       <li>Rapid prototyping and iteration</li>
       <li>Implementing pixel-perfect responsive front-ends from Sketch, Photoshop, and Figma</li>
       <li>eCommerce applications</li>
-      <li>Web3 and blockchain</li>
+      <li>Web3 and blockchain development</li>
       <li>Architecture and initial technology decisions for greenfield applications</li>
       <li>Migrating legacy applications to newer technologies and architectures</li>
       <li>REST and GraphQL endpoint development and integration</li>
